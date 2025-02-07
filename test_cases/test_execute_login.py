@@ -10,6 +10,7 @@ class Test_Login_Account:
 	password = "Testuser@1234"
 	invalid_username = "hidufhei@eoidw.com"
 
+
 	def test_valid_login(self):
 		self.driver = webdriver.Chrome()
 		self.driver.maximize_window()
@@ -18,9 +19,10 @@ class Test_Login_Account:
 		self.user_login.enter_username(self.username)
 		self.user_login.enter_password(self.password)
 		self.user_login.click_login()
+		page_title = self.driver.title
+		print("Page title is: ", page_title)
 		self.driver.close()
 		assert True
-
 
 	def test_invalid_login(self):
 		self.driver = webdriver.Chrome()

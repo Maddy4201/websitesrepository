@@ -1,18 +1,18 @@
 import pytest
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 from base_pages.account_login import Login
+from utilities.read_properties import Read_Config_Data
 
 
 class Test_Login_Account:
+	website_url = Read_Config_Data.get_url()
+	username = Read_Config_Data.get_username()
+	password = Read_Config_Data.get_password()
+	invalid_username = Read_Config_Data.get_invalid_username()
 
-	website_url = "https://aspx.co.in/login"
-	username = "testuser12@yopmail.com"
-	password = "Testuser@1234"
-	invalid_username = "hidufhei@eoidw.com"
-
-
-	def test_valid_login(self):
-		self.driver = webdriver.Chrome()
+	def test_valid_login(self, setup):
+		self.driver = setup
 		self.driver.maximize_window()
 		self.driver.get(self.website_url)
 		self.user_login = Login(self.driver)
@@ -22,10 +22,11 @@ class Test_Login_Account:
 		page_title = self.driver.title
 		print("Page title is: ", page_title)
 		self.driver.close()
+		# self.driver.save_screenshot(".\\screenshots\\test_valid_login.png")
 		assert True
 
-	def test_invalid_login(self):
-		self.driver = webdriver.Chrome()
+	def test_invalid_login(self, setup):
+		self.driver = setup
 		self.driver.maximize_window()
 		self.driver.get(self.website_url)
 		self.user_login = Login(self.driver)
@@ -33,7 +34,13 @@ class Test_Login_Account:
 		self.user_login.enter_password(self.password)
 		self.user_login.click_login()
 		error_msg = self.user_login.get_error_msg()
-		print("Error msg: ",error_msg )
-		self.driver.close()
-		assert True
+		if error_msg == "These credentials do not match our records.":
+			assert True
+		else:
+			self.driver.save_screenshot(".\\screenshots\\test_valid_login.png")
+			self.driver.close()
+			assert False
 
+	# self.driver.close()
+	# self.driver.save_screenshot(".\\screenshots\\test_valid_login.png")
+	# assert True

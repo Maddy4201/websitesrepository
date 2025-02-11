@@ -6,6 +6,7 @@ class Login:
      password_field_id = "password"
      login_button_xpath = "//button[@class='submit-button']"
      error_msg_xpath = "//span[@class='help-block']"
+     visitWebsiteText_xpath = "//a[@id='visit-website_tooltip']"
 
      def __init__(self, driver):
          self.driver = driver
@@ -21,6 +22,9 @@ class Login:
 
      def get_error_msg(self):
          return self.driver.find_element(By.XPATH, self.error_msg_xpath).text
+
+     def visit_website_text(self):
+         return self.driver.find_element(By.XPATH, self.visitWebsiteText_xpath).text
 
 
 

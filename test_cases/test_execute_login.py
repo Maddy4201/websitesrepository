@@ -26,9 +26,8 @@ class Test_Login_Account:
 		page_title = self.driver.title
 		print("Page title is: ", page_title)
 		loginConfirmationText = self.user_login.visit_website_text()
-		print(loginConfirmationText)
 		self.driver.close()
-		self.logger.info("**********Login done and text copied from dashboard*********")
+		self.logger.info("**********Login in test closed*********")
 		# self.driver.save_screenshot(".\\screenshots\\test_valid_login.png")
 		assert True
 

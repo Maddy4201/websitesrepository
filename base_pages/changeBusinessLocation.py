@@ -1,4 +1,7 @@
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
 from base_pages.account_login import Login
 
 
@@ -15,9 +18,10 @@ class Change_Location(Login):
 
 	def change_business_city(self):
 		self.driver.implicitly_wait(10)
-		self.driver.find_element(By.XPATH, self.business_profile_optn_xpath).click()
-		self.driver.find_element(By.XPATH, self.edit_button_xpath).click()
-		self.driver.find_element(By.XPATH, self.city_field_xpath).click()
-		self.driver.find_element(By.XPATH, self.city_textField_xpath).send_keys("new ")
-		self.driver.find_element(By.XPATH, self.city_results_xpath).click()
-		self.driver.find_element(By.XPATH, self.save_button_xpath).click()
+		self.wait.until(EC.visibility_of_element_located((By.XPATH, self.business_profile_optn_xpath))).click()
+		self.wait.until(EC.visibility_of_element_located((By.XPATH, self.edit_button_xpath))).click()
+		self.wait.until(EC.visibility_of_element_located((By.XPATH, self.city_field_xpath))).click()
+		self.wait.until(EC.visibility_of_element_located((By.XPATH, self.city_textField_xpath))).send_keys("new ")
+		self.wait.until(EC.visibility_of_element_located((By.XPATH, self.city_results_xpath))).click()
+		self.wait.until(EC.visibility_of_element_located((By.XPATH, self.save_button_xpath))).click()
+

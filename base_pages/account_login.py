@@ -28,7 +28,3 @@ class Login:
 
      def visit_website_text(self):
          return self.driver.find_element(By.XPATH, self.visitWebsiteText_xpath).text
-
-
-
-

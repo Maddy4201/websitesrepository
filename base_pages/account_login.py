@@ -14,6 +14,13 @@ class Login:
          self.driver = driver
          self.wait = WebDriverWait(driver, 10)
 
+     def wait_for_loader_to_disappear(self):
+        try:
+            WebDriverWait(self.driver, 5).until(EC.invisibility_of_element_located((By.ID,"ajaxLoader")))
+            print("Loader disappeared, proceeding...")
+        except:
+            print("No loader found or already disappeared.")
+
      def enter_username(self, username):
          self.wait.until(EC.visibility_of_element_located((By.ID, self.username_field_id))).send_keys(username)
 
@@ -22,6 +29,7 @@ class Login:
 
      def click_login (self):
          self.wait.until(EC.visibility_of_element_located((By.XPATH, self.login_button_xpath ))).click()
+         self.wait_for_loader_to_disappear()
 
      def get_error_msg(self):
          return self.driver.find_element(By.XPATH, self.error_msg_xpath).text

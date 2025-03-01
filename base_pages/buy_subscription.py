@@ -12,6 +12,7 @@ class Purchase_Subscription(Login):
 	one_year_plan_xpath = "//div[@id='currentPlanDuration']"
 	buy_button_xpath = "//button[@id='upgradeBtn']"
 	pay_now_button_id = "show-payment-pop-up"
+	grand_total_price_id = "formatted-grand-total"
 
 	def __int__(self, driver):
 		super().__init__(driver)
@@ -34,6 +35,10 @@ class Purchase_Subscription(Login):
 	def click_pay_now_button(self):
 		self.wait_for_loader_to_disappear()
 		self.wait.until(EC.visibility_of_element_located((By.ID, self.pay_now_button_id))).click()
+
+	def get_grand_total_text(self):
+		priceText = self.wait.until(EC.visibility_of_element_located((By.ID, self.grand_total_price_id)))
+		print(priceText.text)
 
 
 

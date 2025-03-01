@@ -24,6 +24,7 @@ class Test_Buy_Subscription:
 		self.buySub_obj.select_one_year_plan()
 		self.buySub_obj.click_buy_button()
 		self.buySub_obj.click_pay_now_button()
+		self.buySub_obj.get_grand_total_text()
 
 
 

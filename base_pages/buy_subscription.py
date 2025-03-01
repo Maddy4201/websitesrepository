@@ -32,6 +32,7 @@ class Purchase_Subscription(Login):
 		self.wait.until(EC.visibility_of_element_located((By.XPATH, self.buy_button_xpath))).click()
 
 	def click_pay_now_button(self):
+		self.wait_for_loader_to_disappear()
 		self.wait.until(EC.visibility_of_element_located((By.ID, self.pay_now_button_id))).click()
 
 

@@ -16,7 +16,7 @@ class Login:
 
      def wait_for_loader_to_disappear(self):
         try:
-            WebDriverWait(self.driver, 5).until(EC.invisibility_of_element_located((By.ID,"ajaxLoader")))
+            WebDriverWait(self.driver, 8).until(EC.invisibility_of_element_located((By.ID,"ajaxLoader")))
             print("Loader disappeared, proceeding...")
         except:
             print("No loader found or already disappeared.")

@@ -16,7 +16,6 @@ class Change_Location(Login):
 	cities_list_xpath = "//span[@class='select2-results']//li"
 	save_button_xpath = "//button[@id='btn-save-business-profile']"
 
-
 	def __init__(self, driver):
 		super().__init__(driver)
 

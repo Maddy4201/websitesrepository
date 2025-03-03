@@ -15,16 +15,32 @@ def browser(request):
 @pytest.fixture()
 def setup(browser):
 	global driver
+	download_path = "C:\\Users\\Madhur\\PycharmProjects\\websitesproject\\downloaded_files"
+	pereferences = {"download.default_directory": download_path,
+					"download.prompt_for_download": False,
+					"download.directory_upgrade": True,
+					"safebrowsing.enabled": True
+					}
 	if browser == "chrome":
-		driver = webdriver.Chrome()
+		chrome_options = webdriver.ChromeOptions()
+		chrome_options.add_experimental_option("prefs", pereferences)
+		driver = webdriver.Chrome(options=chrome_options)
 	elif browser == "firefox":
-		driver = webdriver.Firefox()
+		firefox_options = webdriver.FirefoxOptions()
+		firefox_options.set_preference("browser.download.folderList", 2)
+		firefox_options.set_preference("browser.download.dir", download_path)
+		firefox_options.set_preference("browser.helperApps.neverAsk.saveToDisk", "application/pdf")
+		driver = webdriver.Firefox(options=firefox_options)
 	elif browser == "edge":
-		driver = webdriver.Edge()
+		edge_options = webdriver.EdgeOptions()
+		edge_options.add_experimental_option("prefs", pereferences)
+		driver = webdriver.Edge(options=edge_options)
 	else:
 		raise ValueError("Unsupported browser")
 
-	return driver
+	driver.maximize_window()
+	yield driver
+	driver.quit()
 
 ######## For pytest html reports #########
 # hook for adding environment info into html report

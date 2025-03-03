@@ -22,4 +22,7 @@ class Test_Business_Card:
 		self.card_obj.get_card_page_text()
 		self.card_obj.click_download_business_card()
 		time.sleep(3)
+		self.card_obj.click_next_card_arrow()
+		self.card_obj.click_download_business_card()
+		time.sleep(3)
 

@@ -13,7 +13,9 @@ class Test_Login_Account:
 	invalid_username = Read_Config_Data.get_invalid_username()
 	logger = Log_Maker.log_gen()
 
+	@pytest.mark.order(1)
 	def test_valid_login(self, setup):
+		self.logger.info("************Running Test no. 01*************")
 		self.logger.info("**************Opened the browser****************")
 		self.driver = setup
 		self.driver.maximize_window()

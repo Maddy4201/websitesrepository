@@ -13,6 +13,7 @@ class Login:
      congratulations_popUp_xpath = "//button[normalize-space()='Check it later']"
      tooltip_popUp_xpath = "//button[@class='driver-popover-close-btn']"
      bogo_offer_popUp_xpath = "//button[contains(@class, 'close') and contains(@class, '__bogo_popup_close_event')]"
+     offer_popUp_xpath = "//button[contains(@class, 'close') and contains(@class, 'btn-dynamic-offer-modal')]"
 
      def __init__(self, driver):
          self.driver = driver
@@ -34,6 +35,7 @@ class Login:
      def click_login (self):
          self.wait.until(EC.visibility_of_element_located((By.XPATH, self.login_button_xpath ))).click()
          self.wait_for_loader_to_disappear()
+         self.ignore_offer_popUp()
          self.ignore_congratulations_popUp()
          self.ignore_tooltip_popUp()
          self.ignore_bogo_offer_popUp()
@@ -65,6 +67,16 @@ class Login:
              if bogo_popUp.is_displayed():
                  bogo_popUp.click()
                  print("BOGO Offer pop-up closed.")
+         except (NoSuchElementException, TimeoutException):
+             print("No Tooltip pop-up, moving on")
+
+     def ignore_offer_popUp(self):
+         try:
+            offer_popUp = self.driver.find_element(By.XPATH, self.offer_popUp_xpath)
+            if offer_popUp.is_displayed():
+                offer_popUp.click()
+                print("BOGO Offer pop-up closed.")
+
          except (NoSuchElementException, TimeoutException):
              print("No Tooltip pop-up, moving on")
 

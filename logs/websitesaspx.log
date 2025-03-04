@@ -1,4 +1,19 @@
-2025-03-04 16:37:53 - WARNING - The chromedriver version (132.0.6834.159) detected in PATH at C:\Users\Madhur\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (133.0.6943.142); currently, chromedriver 133.0.6943.141 is recommended for chrome 133.*, so it is advised to delete the driver in PATH and retry
-2025-03-04 16:37:54 - INFO - **************Opened the browser****************
-2025-03-04 16:38:09 - INFO - **************Logged into the account****************
-2025-03-04 16:38:09 - INFO - **********Login in test closed*********
+2025-03-04 18:20:50 - WARNING - The chromedriver version (132.0.6834.159) detected in PATH at C:\Users\Madhur\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (133.0.6943.142); currently, chromedriver 133.0.6943.141 is recommended for chrome 133.*, so it is advised to delete the driver in PATH and retry
+2025-03-04 18:20:52 - INFO - ************Running Test no. 01*************
+2025-03-04 18:20:52 - INFO - **************Opened the browser****************
+2025-03-04 18:21:05 - INFO - **************Logged into the account****************
+2025-03-04 18:21:05 - INFO - **********Login in test closed*********
+2025-03-04 18:21:08 - WARNING - The chromedriver version (132.0.6834.159) detected in PATH at C:\Users\Madhur\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (133.0.6943.142); currently, chromedriver 133.0.6943.141 is recommended for chrome 133.*, so it is advised to delete the driver in PATH and retry
+2025-03-04 18:21:09 - INFO - ************ Running Test no. 02 *************
+2025-03-04 18:21:25 - INFO - ************ Logged in successfully to change business location *************
+2025-03-04 18:21:44 - INFO - ************ Change Business Location Successfully *************
+2025-03-04 18:21:50 - WARNING - The chromedriver version (132.0.6834.159) detected in PATH at C:\Users\Madhur\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (133.0.6943.142); currently, chromedriver 133.0.6943.141 is recommended for chrome 133.*, so it is advised to delete the driver in PATH and retry
+2025-03-04 18:21:51 - INFO - ************ Running Test no. 03 *************
+2025-03-04 18:22:29 - INFO - ************ Logged in successfully to Buy Subscription *************
+2025-03-04 18:22:47 - INFO - ************ Confirmed one year plan to buy *************
+2025-03-04 18:22:48 - INFO - ************ Captured plan total and currency *************
+2025-03-04 18:22:51 - WARNING - The chromedriver version (132.0.6834.159) detected in PATH at C:\Users\Madhur\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (133.0.6943.142); currently, chromedriver 133.0.6943.141 is recommended for chrome 133.*, so it is advised to delete the driver in PATH and retry
+2025-03-04 18:22:52 - INFO - ************ Running Test no. 04 *************
+2025-03-04 18:23:04 - INFO - ************ Logged in successfully to dowload Business Card *************
+2025-03-04 18:23:08 - INFO - ************ Dowloaded first business card *************
+2025-03-04 18:23:12 - INFO - ************ Dowloaded second business card *************

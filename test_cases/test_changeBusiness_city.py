@@ -1,5 +1,6 @@
 import time
 
+import pytest
 from selenium import webdriver
 from base_pages.account_login import Login
 from base_pages.changeBusinessLocation import Change_Location
@@ -14,7 +15,9 @@ class Test_City_Change:
 	selected_city = Read_Config_Data.get_selected_city()
 	logger = Log_Maker.log_gen()
 
+	@pytest.mark.order(2)
 	def test_new_city(self,setup):
+		self.logger.info("************ Running Test no. 02 *************")
 		self.driver = setup
 		self.driver.maximize_window()
 		self.driver.get(self.website_url)
@@ -22,12 +25,14 @@ class Test_City_Change:
 		self.city_obj.enter_username(self.username)
 		self.city_obj.enter_password(self.password)
 		self.city_obj.click_login()
+		self.logger.info("************ Logged in successfully to change business location *************")
 		self.city_obj.click_business_profile_tab()
 		self.city_obj.click_edit_button()
 		self.city_obj.click_city_field()
 		self.city_obj.input_city_initial(self.city_input)
 		self.city_obj.select_opted_city(self.selected_city)
 		self.city_obj.click_save_location_button()
+		self.logger.info("************ Change Business Location Successfully *************")
 		time.sleep(3)
 
 

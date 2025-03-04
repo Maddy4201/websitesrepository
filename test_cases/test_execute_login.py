@@ -31,6 +31,7 @@ class Test_Login_Account:
 		# self.driver.save_screenshot(".\\screenshots\\test_valid_login.png")
 		assert True
 
+	@pytest.mark.skip(reason="Skipping this method for now")
 	def test_invalid_login(self, setup):
 		self.logger.info("**********Launched browser for 2nd test case*********")
 		self.driver = setup

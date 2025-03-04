@@ -23,6 +23,7 @@ class Test_Business_Card:
 		self.card_obj.click_download_business_card()
 		time.sleep(3)
 		self.card_obj.click_next_card_arrow()
+		# clicking download for next card
 		self.card_obj.click_download_business_card()
 		time.sleep(3)
 

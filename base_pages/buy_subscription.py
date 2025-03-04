@@ -19,6 +19,7 @@ class Purchase_Subscription(Login):
 
 	def click_subscription_button(self):
 		self.wait.until(EC.visibility_of_element_located((By.XPATH, self.buy_subscription_button_xpath))).click()
+		self.wait_for_loader_to_disappear()
 
 	def select_yearly_plan(self):
 		self.wait.until(EC.visibility_of_element_located((By.XPATH, self.yearly_plan_xpath))).click()
@@ -31,10 +32,11 @@ class Purchase_Subscription(Login):
 
 	def click_buy_button(self):
 		self.wait.until(EC.visibility_of_element_located((By.XPATH, self.buy_button_xpath))).click()
+		self.wait_for_loader_to_disappear()
 
 	def click_pay_now_button(self):
-		self.wait_for_loader_to_disappear()
 		self.wait.until(EC.visibility_of_element_located((By.ID, self.pay_now_button_id))).click()
+		self.wait_for_loader_to_disappear()
 
 	def get_grand_total_text(self):
 		priceText = self.wait.until(EC.visibility_of_element_located((By.ID, self.grand_total_price_id)))

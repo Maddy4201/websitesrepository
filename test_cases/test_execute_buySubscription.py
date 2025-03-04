@@ -1,6 +1,7 @@
 from selenium import webdriver
 from base_pages.account_login import Login
 from base_pages.buy_subscription import Purchase_Subscription
+from utilities.custom_logger import Log_Maker
 from utilities.read_properties import Read_Config_Data
 
 
@@ -8,6 +9,7 @@ class Test_Buy_Subscription:
 	website_url = Read_Config_Data.get_url()
 	username = Read_Config_Data.get_username()
 	password = Read_Config_Data.get_password()
+	logger = Log_Maker.log_gen()
 
 
 	def test_get_subscription(self, setup):

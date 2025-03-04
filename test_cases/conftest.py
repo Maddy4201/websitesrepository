@@ -49,7 +49,7 @@ def pytest_configure(config):
 	config.stash[metadata_key]['Project name'] = 'Websites.co.in automation project'
 	config.stash[metadata_key]['Test Module Name'] = 'Login / Sign Up'
 	config.stash[metadata_key]['Tester Name'] = 'Madhur Soni'
-	config.stash[metadata_key]['Month & Year'] = 'Feb 2025'
+	config.stash[metadata_key]['Month & Year'] = 'March 2025'
 
 # hook to delete/modify environment info into html report
 def pytest_metadata(metadata):

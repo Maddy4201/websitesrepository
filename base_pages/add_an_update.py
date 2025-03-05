@@ -12,7 +12,7 @@ class Add_New_Update(Login):
 	description_field_xpath = "//div[@class='note-editable panel-body']"
 	save_post_button_id = "savePost"
 	manage_update_post_xpath = "//span[normalize-space()='Manage Update/Post']"
-	added_updates_xpath = "//ul[@class='timeline']//li"
+	added_updates_xpath = "//ul[@class='timeline']//li//h3"
 	edit_button_id = "editBtn"
 	# //ul[@class='timeline']//li//div[2]//a[2][@id='editBtn']
 
@@ -43,8 +43,10 @@ class Add_New_Update(Login):
 		self.wait_for_loader_to_disappear()
 		updates = self.wait.until(EC.visibility_of_all_elements_located((By.XPATH, self.added_updates_xpath)))
 		for update in updates:
-			if update.text == "New Update":
-				self.wait.until(EC.visibility_of_element_located((By.ID, self.edit_button_id))).click()
-				break
-		self.wait_for_loader_to_disappear()
+			if update.text == "Test Update":
+				print("Update Verified")
+			else:
+				print("Update not verified yet..")
+			break
+
 

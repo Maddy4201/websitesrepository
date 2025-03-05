@@ -27,11 +27,11 @@ class Test_Business_Card:
 		self.card_obj.click_business_card_option()
 		self.card_obj.get_card_page_text()
 		self.card_obj.click_download_business_card()
-		self.logger.info("************ Dowloaded first business card *************")
+		self.logger.info("************ Downloaded first business card *************")
 		time.sleep(3)
 		self.card_obj.click_next_card_arrow()
 		# clicking download for next card
 		self.card_obj.click_download_business_card()
-		self.logger.info("************ Dowloaded second business card *************")
+		self.logger.info("************ Downloaded second business card *************")
 		time.sleep(3)
 

@@ -14,7 +14,7 @@ class Purchase_Subscription(Login):
 	pay_now_button_id = "show-payment-pop-up"
 	grand_total_price_id = "formatted-grand-total"
 
-	def __int__(self, driver):
+	def __init__(self, driver):
 		super().__init__(driver)
 
 	def click_subscription_button(self):

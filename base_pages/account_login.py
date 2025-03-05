@@ -35,12 +35,12 @@ class Login:
      def click_login (self):
          self.wait.until(EC.visibility_of_element_located((By.XPATH, self.login_button_xpath ))).click()
          self.wait_for_loader_to_disappear()
-         self.ignore_offer_popUp()
-         self.ignore_congratulations_popUp()
-         self.ignore_tooltip_popUp()
-         self.ignore_bogo_offer_popUp()
+         self.ignore_offer_popup()
+         self.ignore_congratulations_popup()
+         self.ignore_tooltip_popup()
+         self.ignore_bogo_offer_popup()
 
-     def ignore_congratulations_popUp(self):
+     def ignore_congratulations_popup(self):
          try:
              congo_popUp = self.driver.find_element(By.XPATH, self.congratulations_popUp_xpath)
              if congo_popUp.is_displayed():
@@ -52,7 +52,7 @@ class Login:
          except NoSuchElementException:
              print("Pop-up not found, proceeding normally.")
 
-     def ignore_tooltip_popUp(self):
+     def ignore_tooltip_popup(self):
          try:
              tooltip_popUp = self.driver.find_element(By.XPATH, self.tooltip_popUp_xpath)
              if tooltip_popUp.is_displayed():
@@ -61,7 +61,7 @@ class Login:
          except (NoSuchElementException, TimeoutException):
              print("No Tooltip pop-up, moving on")
 
-     def ignore_bogo_offer_popUp(self):
+     def ignore_bogo_offer_popup(self):
          try:
              bogo_popUp = self.driver.find_element(By.XPATH, self.bogo_offer_popUp_xpath)
              if bogo_popUp.is_displayed():
@@ -70,11 +70,11 @@ class Login:
          except (NoSuchElementException, TimeoutException):
              print("No Tooltip pop-up, moving on")
 
-     def ignore_offer_popUp(self):
+     def ignore_offer_popup(self):
          try:
-            offer_popUp = self.driver.find_element(By.XPATH, self.offer_popUp_xpath)
-            if offer_popUp.is_displayed():
-                offer_popUp.click()
+            offer_popup = self.driver.find_element(By.XPATH, self.offer_popUp_xpath)
+            if offer_popup.is_displayed():
+                offer_popup.click()
                 print("BOGO Offer pop-up closed.")
 
          except (NoSuchElementException, TimeoutException):

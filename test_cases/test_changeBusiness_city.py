@@ -1,8 +1,7 @@
 import time
 
 import pytest
-from selenium import webdriver
-from base_pages.account_login import Login
+
 from base_pages.changeBusinessLocation import Change_Location
 from utilities.custom_logger import Log_Maker
 from utilities.read_properties import Read_Config_Data

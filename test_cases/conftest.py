@@ -1,6 +1,7 @@
 import pytest
 from selenium import webdriver
 from pytest_metadata.plugin import metadata_key
+from webdriver_manager.chrome import ChromeDriverManager
 
 
 def pytest_addoption(parser):

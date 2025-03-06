@@ -1,3 +1,4 @@
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC, wait
@@ -43,7 +44,7 @@ class Add_New_Update(Login):
 		self.wait_for_loader_to_disappear()
 		updates = self.wait.until(EC.visibility_of_all_elements_located((By.XPATH, self.added_updates_xpath)))
 		for update in updates:
-			if update.text == "Test Update":
+			if update.text == "Update on the website":
 				print("Update Verified")
 			else:
 				print("Update not verified yet..")

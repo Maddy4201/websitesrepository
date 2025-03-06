@@ -26,10 +26,10 @@ class Read_Config_Data:
 
 	@staticmethod
 	def get_city_input():
-		return config.get('CITY', 'city_input')  # Fetch city input for search
+		return config.get('city_data', 'city_input')  # Fetch city input for search
 
 	@staticmethod
 	def get_selected_city():
-		return config.get('CITY', 'selected_city')
+		return config.get('city_data', 'selected_city')
 
 

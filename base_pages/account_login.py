@@ -1,3 +1,5 @@
+import time
+
 from selenium.common import TimeoutException, NoSuchElementException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -35,6 +37,7 @@ class Login:
      def click_login (self):
          self.wait.until(EC.visibility_of_element_located((By.XPATH, self.login_button_xpath ))).click()
          self.wait_for_loader_to_disappear()
+         time.sleep(2)
          self.ignore_offer_popup()
          self.ignore_congratulations_popup()
          self.ignore_tooltip_popup()
@@ -68,7 +71,7 @@ class Login:
                  bogo_popUp.click()
                  print("BOGO Offer pop-up closed.")
          except (NoSuchElementException, TimeoutException):
-             print("No Tooltip pop-up, moving on")
+             print("No Bogo offer pop-up, moving on")
 
      def ignore_offer_popup(self):
          try:

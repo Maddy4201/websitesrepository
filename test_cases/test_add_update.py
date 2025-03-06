@@ -13,7 +13,7 @@ class Test_Execute_Add_Update:
 	password = Read_Config_Data.get_password()
 	logger = Log_Maker().log_gen()
 
-	@pytest.mark.skip(reason="Skipping this method for now")
+	# @pytest.mark.skip(reason="Skipping this method for now")
 	def test_add_new_update(self, setup):
 		self.driver = setup
 		self.driver.maximize_window()
@@ -25,8 +25,8 @@ class Test_Execute_Add_Update:
 		self.logger.info("********* Logged in for adding an update ***********")
 		self.update_obj.click_updates_post_option()
 		self.update_obj.click_add_update_posts_option()
-		self.update_obj.enter_text_into_title_field("This is test title")
-		self.update_obj.enter_description_text("Test Description Text")
+		self.update_obj.enter_text_into_title_field("Update on the website")
+		self.update_obj.enter_description_text("This is the update description of latest product")
 		self.update_obj.click_save_post_button()
 		self.logger.info("********* Added and saved an Update ***********")
 
@@ -42,5 +42,5 @@ class Test_Execute_Add_Update:
 		self.update_obj.click_updates_post_option()
 		self.update_obj.click_manage_update_post()
 		self.update_obj.search_added_update()
-		time.sleep(5)
+		time.sleep(3)
 

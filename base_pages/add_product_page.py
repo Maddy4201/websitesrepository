@@ -11,7 +11,7 @@ class Add_New_Product(Login):
 	product_services_option_xpath = "//span[normalize-space()='Products/Services']"
 	add_product_button_id = "addProducts"
 	product_type_select_xpath = "//select[@id='changeOnclick']"
-	product_condition_select_id = "//select[@id='condition']"
+	product_condition_select_xpath = "//select[@id='condition']"
 	product_name_tag = "name"
 	price_field_id = "price"
 	discount_type_select_id = "discountType"
@@ -33,33 +33,47 @@ class Add_New_Product(Login):
 
 	def click_product_service_option(self):
 		self.wait.until(EC.visibility_of_element_located((By.XPATH, self.product_services_option_xpath))).click()
+		self.wait_for_loader_to_disappear()
 
 	def click_add_product_button(self):
 		self.wait.until(EC.visibility_of_element_located((By.ID, self.add_product_button_id))).click()
+		self.wait_for_loader_to_disappear()
 
 	def select_product_type(self):
-		select_product = self.driver.find_element(By.ID, self.product_type_select_xpath)
+		self.wait_for_loader_to_disappear()
+		select_product = self.driver.find_element(By.XPATH, self.product_type_select_xpath)
 		slct = Select(select_product)
 		slct.select_by_value("product")
+		try:
+			self.driver.find_element(By.XPATH, self.product_condition_select_xpath)
+			return True
+		except:
+			return False
 
 	def select_product_condition(self):
-		select_condition = self.driver.find_element(By.ID, self.product_condition_select_id)
-		selct = Select(select_condition)
-		selct.select_by_value("usedExcellent")
+		try:
+			select_condition = self.driver.find_element(By.XPATH, self.product_condition_select_xpath)
+			selct = Select(select_condition)
+			selct.select_by_value("refurbished")
+			return True
+		except:
+			return False
 
 	def enter_product_name(self):
 		self.wait.until(EC.visibility_of_element_located((By.NAME, self.product_name_tag))).send_keys("Test Product")
 
-	def enter_price_amount(self):
-		self.wait.until(EC.visibility_of_element_located((By.ID, self.price_field_id))).send_keys("199")
+	def enter_price_amount(self, price):
+		price_field = self.wait.until(EC.visibility_of_element_located((By.ID, self.price_field_id)))
+		price_field.clear()
+		price_field.send_keys(price)
 
 	def select_discount_type(self):
 		discount_type= self.driver.find_element(By.ID, self.discount_type_select_id)
 		slect = Select(discount_type)
-		slect.select_by_value("Absolute")
+		slect.select_by_value("2")
 
-	def enter_discount_amount(self):
-		self.wait.until(EC.visibility_of_element_located((By.ID, self.discount_field_id))).send_keys("50")
+	def enter_discount_amount(self, discount):
+		self.wait.until(EC.visibility_of_element_located((By.ID, self.discount_field_id))).send_keys(discount)
 
 	def enter_inventory_count(self):
 		self.wait.until(EC.visibility_of_element_located((By.ID, self.inventory_field_id))).send_keys("10")

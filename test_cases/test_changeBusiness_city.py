@@ -15,6 +15,8 @@ class Test_City_Change:
 	logger = Log_Maker.log_gen()
 
 	@pytest.mark.order(2)
+	@pytest.mark.sanity
+	@pytest.mark.regression
 	def test_new_city(self,setup):
 		self.logger.info("************ Running Test no. 02 *************")
 		self.driver = setup

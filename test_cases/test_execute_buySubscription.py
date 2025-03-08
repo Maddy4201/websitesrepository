@@ -13,6 +13,7 @@ class Test_Buy_Subscription:
 	logger = Log_Maker.log_gen()
 
 	@pytest.mark.order(3)
+	@pytest.mark.sanity
 	def test_get_subscription(self, setup):
 		self.logger.info("************ Running Test no. 03 *************")
 		self.driver = setup

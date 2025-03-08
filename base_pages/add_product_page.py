@@ -59,8 +59,8 @@ class Add_New_Product(Login):
 		except:
 			return False
 
-	def enter_product_name(self):
-		self.wait.until(EC.visibility_of_element_located((By.NAME, self.product_name_tag))).send_keys("Test Product")
+	def enter_product_name(self, new_product_name):
+		self.wait.until(EC.visibility_of_element_located((By.NAME, self.product_name_tag))).send_keys(new_product_name)
 
 	def enter_price_amount(self, price):
 		price_field = self.wait.until(EC.visibility_of_element_located((By.ID, self.price_field_id)))
@@ -90,10 +90,10 @@ class Add_New_Product(Login):
 				print("Unable to click on category")
 			break
 
-	def add_new_category(self):
+	def add_new_category(self, name_of_category):
 		self.wait.until(EC.visibility_of_element_located((By.XPATH, self.create_category_button_xpath))).click()
 		self.wait_for_loader_to_disappear()
-		self.wait.until(EC.visibility_of_element_located((By.ID, self.category_name_id))).send_keys("Newest Cat")
+		self.wait.until(EC.visibility_of_element_located((By.ID, self.category_name_id))).send_keys(name_of_category)
 		self.wait.until(EC.visibility_of_element_located((By.NAME, self.save_category_button_name))).click()
 		self.wait_for_loader_to_disappear()
 
@@ -101,6 +101,7 @@ class Add_New_Product(Login):
 		self.wait.until(EC.visibility_of_element_located((By.ID, self.description_field_id))).send_keys("This is description of this product")
 
 	def click_publish_product_button(self):
+		self.wait_for_loader_to_disappear()
 		self.wait.until(EC.visibility_of_element_located((By.ID, self.publish_product_button_id))).click()
 
 

@@ -103,5 +103,6 @@ class Add_New_Product(Login):
 	def click_publish_product_button(self):
 		self.wait_for_loader_to_disappear()
 		self.wait.until(EC.visibility_of_element_located((By.ID, self.publish_product_button_id))).click()
+		self.wait_for_loader_to_disappear()
 
 

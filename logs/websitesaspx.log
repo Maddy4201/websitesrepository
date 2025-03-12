@@ -1,0 +1,49 @@
+2025-03-11 19:19:51 - INFO - ************Running Test no. 01*************
+2025-03-11 19:19:51 - INFO - **************Opened the browser****************
+2025-03-11 19:20:09 - INFO - **************Logged into the account****************
+2025-03-11 19:20:09 - INFO - **********Login in test closed*********
+2025-03-11 19:20:18 - INFO - ************ Running Test no. 02 *************
+2025-03-11 19:20:34 - INFO - ************ Logged in successfully to change business location *************
+2025-03-11 19:20:54 - INFO - ************ Change Business Location Successfully *************
+2025-03-12 17:05:20 - INFO - ************Running Test no. 01*************
+2025-03-12 17:05:20 - INFO - **************Opened the browser****************
+2025-03-12 17:05:54 - INFO - **************Logged into the account****************
+2025-03-12 17:05:54 - INFO - **********Login in test closed*********
+2025-03-12 17:06:03 - INFO - ************ Running Test no. 02 *************
+2025-03-12 17:06:38 - INFO - ************ Logged in successfully to change business location *************
+2025-03-12 17:18:17 - INFO - ************Running Test no. 01*************
+2025-03-12 17:18:17 - INFO - **************Opened the browser****************
+2025-03-12 17:18:38 - INFO - **************Logged into the account****************
+2025-03-12 17:18:38 - INFO - **********Login in test closed*********
+2025-03-12 17:18:42 - INFO - ************ Running Test no. 02 *************
+2025-03-12 17:18:59 - INFO - ************ Logged in successfully to change business location *************
+2025-03-12 17:19:17 - INFO - ************ Running Test no. 03 *************
+2025-03-12 17:19:37 - INFO - ************ Logged in successfully to Buy Subscription *************
+2025-03-12 17:19:56 - INFO - ************ Running Test no. 04 *************
+2025-03-12 17:20:15 - INFO - ************ Logged in successfully to dowload Business Card *************
+2025-03-12 17:20:19 - INFO - ************ Downloaded first business card *************
+2025-03-12 17:20:22 - INFO - ************ Downloaded second business card *************
+2025-03-12 17:20:47 - INFO - ************ Logged in to add a product ************
+2025-03-12 17:21:25 - INFO - ********* Logged in for adding an update ***********
+2025-03-12 18:08:34 - INFO - ************Running Test no. 01*************
+2025-03-12 18:08:34 - INFO - **************Opened the browser****************
+2025-03-12 18:08:54 - INFO - **************Logged into the account****************
+2025-03-12 18:08:54 - INFO - **********Login in test closed*********
+2025-03-12 18:15:14 - INFO - ************Running Test no. 01*************
+2025-03-12 18:15:14 - INFO - **************Opened the browser****************
+2025-03-12 18:15:31 - INFO - **************Logged into the account****************
+2025-03-12 18:15:32 - INFO - **********Login in test closed*********
+2025-03-12 18:28:04 - INFO - ************ Running Test no. 02 *************
+2025-03-12 18:28:22 - INFO - ************ Logged in successfully to change business location *************
+2025-03-12 18:35:13 - INFO - ************ Running Test no. 02 *************
+2025-03-12 18:35:29 - INFO - ************ Logged in successfully to change business location *************
+2025-03-12 18:35:49 - INFO - ************ Change Business Location Successfully *************
+2025-03-12 18:40:58 - INFO - ************ Running Test no. 02 *************
+2025-03-12 18:41:13 - INFO - ************ Logged in successfully to change business location *************
+2025-03-12 18:41:23 - INFO - ************ Change Business Location Successfully *************
+2025-03-12 18:44:58 - INFO - ************Running Test no. 01*************
+2025-03-12 18:44:58 - INFO - **************Opened the browser****************
+2025-03-12 18:45:12 - INFO - **************Logged into the account****************
+2025-03-12 18:45:12 - INFO - **********Login in test closed*********
+2025-03-12 18:55:24 - INFO - ********* Logged in for adding an update ***********
+2025-03-12 18:55:30 - INFO - ********* Added and saved an Update ***********

@@ -1,0 +1,6 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","19976","test_add_new_update","","Wed Mar 12 18:55:10 IST 2025","passed","Wed Mar 12 18:55:30 IST 2025","Test_Execute_Add_Update","test_add_update","",""
+"","22775","test_edit_existing_update","","Wed Mar 12 18:55:34 IST 2025","passed","Wed Mar 12 18:55:57 IST 2025","Test_Execute_Add_Update","test_add_update","",""
+"","0","test_invalid_login","","Wed Mar 12 18:45:14 IST 2025","skipped","Wed Mar 12 18:45:14 IST 2025","Test_Login_Account","test_execute_login","",""
+"","14204","test_valid_login","","Wed Mar 12 18:44:58 IST 2025","passed","Wed Mar 12 18:45:12 IST 2025","Test_Login_Account","test_execute_login","",""
+"","27847","test_new_city","","Wed Mar 12 18:40:58 IST 2025","passed","Wed Mar 12 18:41:26 IST 2025","Test_City_Change","test_changeBusiness_city","",""

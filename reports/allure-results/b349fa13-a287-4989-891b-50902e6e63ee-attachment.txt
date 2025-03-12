@@ -1,0 +1,4 @@
+[32mINFO    [0m root:test_download_businessCard.py:18 ************ Running Test no. 04 *************
+[32mINFO    [0m root:test_download_businessCard.py:26 ************ Logged in successfully to dowload Business Card *************
+[32mINFO    [0m root:test_download_businessCard.py:30 ************ Downloaded first business card *************
+[32mINFO    [0m root:test_download_businessCard.py:35 ************ Downloaded second business card *************

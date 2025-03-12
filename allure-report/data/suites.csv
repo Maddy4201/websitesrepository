@@ -1,2 +1,5 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","26944","test_download_busiCard","","Wed Mar 12 22:08:17 IST 2025","passed","Wed Mar 12 22:08:43 IST 2025","Test_Business_Card","test_download_businessCard","",""
+"","0","test_invalid_login","","Wed Mar 12 23:55:31 IST 2025","skipped","Wed Mar 12 23:55:31 IST 2025","Test_Login_Account","test_execute_login","",""
+"","23162","test_get_subscription","","Wed Mar 12 23:45:48 IST 2025","broken","Wed Mar 12 23:46:11 IST 2025","Test_Buy_Subscription","test_execute_buySubscription","",""
+"","24773","test_download_busiCard","","Wed Mar 12 23:58:00 IST 2025","passed","Wed Mar 12 23:58:25 IST 2025","Test_Business_Card","test_download_businessCard","",""
+"","14615","test_valid_login","","Wed Mar 12 23:55:14 IST 2025","passed","Wed Mar 12 23:55:28 IST 2025","Test_Login_Account","test_execute_login","",""

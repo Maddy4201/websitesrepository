@@ -139,3 +139,41 @@
 2025-03-12 22:31:07 - INFO - **************Opened the browser****************
 2025-03-12 22:31:25 - INFO - **************Logged into the account****************
 2025-03-12 22:31:25 - INFO - **********Login in test closed*********
+2025-03-12 22:36:16 - INFO - ************ Running Test no. 02 *************
+2025-03-12 22:36:31 - INFO - ************ Logged in successfully to change business location *************
+2025-03-12 22:36:45 - INFO - ************ Change Business Location Successfully *************
+2025-03-12 22:40:32 - INFO - ************Running Test no. 01*************
+2025-03-12 22:40:32 - INFO - **************Opened the browser****************
+2025-03-12 22:40:46 - INFO - **************Logged into the account****************
+2025-03-12 22:40:46 - INFO - **********Login in test closed*********
+2025-03-12 22:50:18 - INFO - ************ Logged in to add a product ************
+2025-03-12 22:50:39 - INFO - ********* Logged in for adding an update ***********
+2025-03-12 22:50:45 - INFO - ********* Added and saved an Update ***********
+2025-03-12 22:50:57 - INFO - ************ Running Test no. 02 *************
+2025-03-12 22:51:03 - INFO - ************ Running Test no. 04 *************
+2025-03-12 22:51:11 - INFO - ************ Running Test no. 03 *************
+2025-03-12 22:51:16 - INFO - ************Running Test no. 01*************
+2025-03-12 22:51:16 - INFO - **************Opened the browser****************
+2025-03-12 23:37:13 - INFO - ************Running Test no. 01*************
+2025-03-12 23:37:13 - INFO - **************Opened the browser****************
+2025-03-12 23:37:32 - INFO - **************Logged into the account****************
+2025-03-12 23:37:32 - INFO - **********Login in test closed*********
+2025-03-12 23:40:15 - INFO - ************Running Test no. 01*************
+2025-03-12 23:40:15 - INFO - **************Opened the browser****************
+2025-03-12 23:40:34 - INFO - **************Logged into the account****************
+2025-03-12 23:40:34 - INFO - **********Login in test closed*********
+2025-03-12 23:45:48 - INFO - ************ Running Test no. 03 *************
+2025-03-12 23:46:10 - INFO - ************ Logged in successfully to Buy Subscription *************
+2025-03-12 23:55:14 - INFO - ************Running Test no. 01*************
+2025-03-12 23:55:14 - INFO - **************Opened the browser****************
+2025-03-12 23:55:28 - INFO - **************Logged into the account****************
+2025-03-12 23:55:28 - INFO - **********Login in test closed*********
+2025-03-12 23:58:00 - INFO - ************ Running Test no. 04 *************
+2025-03-12 23:58:14 - INFO - ************ Logged in successfully to dowload Business Card *************
+2025-03-12 23:58:19 - INFO - ************ Downloaded first business card *************
+2025-03-12 23:58:22 - INFO - ************ Downloaded second business card *************
+2025-03-13 00:01:55 - INFO - ************ Running Test no. 03 *************
+2025-03-13 00:02:11 - INFO - ************ Logged in successfully to Buy Subscription *************
+2025-03-13 00:06:34 - INFO - ************ Running Test no. 02 *************
+2025-03-13 00:06:50 - INFO - ************ Logged in successfully to change business location *************
+2025-03-13 00:07:04 - INFO - ************ Change Business Location Successfully *************

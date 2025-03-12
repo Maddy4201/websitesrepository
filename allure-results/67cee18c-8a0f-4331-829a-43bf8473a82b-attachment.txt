@@ -1,0 +1,4 @@
+INFO     root:test_download_businessCard.py:18 ************ Running Test no. 04 *************
+INFO     root:test_download_businessCard.py:26 ************ Logged in successfully to dowload Business Card *************
+INFO     root:test_download_businessCard.py:30 ************ Downloaded first business card *************
+INFO     root:test_download_businessCard.py:35 ************ Downloaded second business card *************

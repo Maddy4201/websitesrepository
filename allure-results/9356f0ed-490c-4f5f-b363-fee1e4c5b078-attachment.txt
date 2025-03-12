@@ -1,2 +1,0 @@
-[32mINFO    [0m root:test_add_update.py:25 ********* Logged in for adding an update ***********
-[32mINFO    [0m root:test_add_update.py:31 ********* Added and saved an Update ***********

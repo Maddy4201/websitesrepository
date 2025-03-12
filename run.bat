@@ -2,24 +2,24 @@
 cd /d %~dp0
 echo Running PyCharm Automation Tests...
 
-:: Optional: Clear old Allure reports
-rmdir /s /q allure-results allure-report
-mkdir allure-results
-mkdir allure-report
+:: 🔴 Clear old Allure reports (Deletes old report data before running new tests)
+rmdir /s /q %WORKSPACE%\allure-results %WORKSPACE%\allure-report
+mkdir %WORKSPACE%\allure-results
+mkdir %WORKSPACE%\allure-report
 
-:: Run only the tests you want, comment out (rem) others
+:: Check if a test file argument is provided
+if "%1"=="" (
+    echo No test file specified. Running all tests.
+    pytest -s -v .\test_cases\ --alluredir=%WORKSPACE%\allure-results
+) else (
+    echo Running specified test: %1
+    pytest -s -v .\test_cases\%1 --alluredir=%WORKSPACE%\allure-results
+)
 
-rem pytest -s -v .\test_cases\test_execute_login.py --alluredir=allure-results
-rem pytest -s -v .\test_cases\test_add_update.py --alluredir=allure-results
-rem pytest -s -v .\test_cases\test_add_product.py --alluredir=allure-results
-rem pytest -s -v .\test_cases\test_changeBusiness_city.py --alluredir=allure-results
-rem pytest -s -v .\test_cases\test_execute_buySubscription.py --alluredir=allure-results
-pytest -s -v .\test_cases\test_download_businessCard.py --alluredir=allure-results
+:: 🔵 Generate Allure report and clean old ones
+allure generate %WORKSPACE%\allure-results -o %WORKSPACE%\allure-report --clean
 
-:: Generate Allure report
-allure generate allure-results -o allure-report --clean
-
-:: Open Allure report in the browser (optional)
-allure open allure-report
+:: 🔵 Open Allure report in the browser (optional)
+allure open %WORKSPACE%\allure-report
 
 pause

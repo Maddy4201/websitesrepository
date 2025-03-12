@@ -135,3 +135,7 @@
 2025-03-12 22:08:32 - INFO - ************ Logged in successfully to dowload Business Card *************
 2025-03-12 22:08:37 - INFO - ************ Downloaded first business card *************
 2025-03-12 22:08:40 - INFO - ************ Downloaded second business card *************
+2025-03-12 22:31:07 - INFO - ************Running Test no. 01*************
+2025-03-12 22:31:07 - INFO - **************Opened the browser****************
+2025-03-12 22:31:25 - INFO - **************Logged into the account****************
+2025-03-12 22:31:25 - INFO - **********Login in test closed*********

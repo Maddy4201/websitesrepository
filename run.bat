@@ -2,7 +2,7 @@
 cd /d %~dp0
 echo Running PyCharm Automation Tests...
 
-:: 🔴 Clear old Allure reports (Deletes old report data before running new tests)
+:: Clear old Allure reports (Deletes old report data before running new tests)
 rmdir /s /q %WORKSPACE%\allure-results %WORKSPACE%\allure-report
 mkdir %WORKSPACE%\allure-results
 mkdir %WORKSPACE%\allure-report
@@ -16,10 +16,10 @@ if "%1"=="" (
     pytest -s -v .\test_cases\%1 --alluredir=%WORKSPACE%\allure-results
 )
 
-:: 🔵 Generate Allure report and clean old ones
+:: Generate Allure report and clean old ones
 allure generate %WORKSPACE%\allure-results -o %WORKSPACE%\allure-report --clean
 
-:: 🔵 Open Allure report in the browser (optional)
+:: pen Allure report in the browser (optional)
 allure open %WORKSPACE%\allure-report
 
 pause

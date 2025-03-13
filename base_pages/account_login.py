@@ -4,9 +4,10 @@ from selenium.common import TimeoutException, NoSuchElementException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from base_pages.base_page import BasePage
 
 
-class Login:
+class Login(BasePage):
      username_field_id = "email"
      password_field_id = "password"
      login_button_xpath = "//button[@class='submit-button']"
@@ -18,8 +19,7 @@ class Login:
      offer_popUp_xpath = "//button[contains(@class, 'close') and contains(@class, 'btn-dynamic-offer-modal')]"
 
      def __init__(self, driver):
-         self.driver = driver
-         self.wait = WebDriverWait(driver, 10)
+         super().__init__(driver)
 
      def wait_for_loader_to_disappear(self):
         try:

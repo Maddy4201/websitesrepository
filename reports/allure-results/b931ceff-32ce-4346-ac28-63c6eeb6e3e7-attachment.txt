@@ -1,4 +1,0 @@
-[32mINFO    [0m root:test_execute_login.py:19 ************Running Test no. 01*************
-[32mINFO    [0m root:test_execute_login.py:20 **************Opened the browser****************
-[32mINFO    [0m root:test_execute_login.py:28 **************Logged into the account****************
-[32mINFO    [0m root:test_execute_login.py:33 **********Login in test closed*********

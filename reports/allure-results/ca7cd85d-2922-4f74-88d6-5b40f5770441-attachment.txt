@@ -1,2 +1,0 @@
-[32mINFO    [0m root:test_execute_buySubscription.py:18 ************ Running Test no. 03 *************
-[32mINFO    [0m root:test_execute_buySubscription.py:26 ************ Logged in successfully to Buy Subscription *************

@@ -1,0 +1,41 @@
+
+=> Static method :
+@staticmethod is not a function, but a decorator in Python. It is used inside a class
+to define a method that does not require access to the instance (self) or the class (cls).
+
+Understanding @staticmethod :
+A normal method in a class requires self (instance) or cls (class reference).
+A static method does not depend on instance or class attributes.
+It behaves like a regular function but belongs to a class for better organization.
+-----
+Conclusion :
+It is useful for utility/helper methods inside a class.
+It helps keep related functions grouped in a class without requiring self or cls.
+
+
+Final Advanced Project Structure
+----------------------------
+websites_project/
+│─── .venv/
+│─── base_pages/                 # Common methods for all pages
+│─── pages/                      # Page Object Model (POM) classes
+│─── locators/                   # Separate locators for each page
+│─── configurations/             # Config files (e.g., config.ini)
+│─── downloaded_files/           # Store downloaded files
+│─── logs/                       # Log files
+│─── reports/                    # Allure reports and logs
+│─── screenshots/                # Captured screenshots
+│─── test_cases/                 # Organized test cases
+│    ├── login_tests/
+│    ├── dashboard_tests/
+│    ├── checkout_tests/
+│─── fixtures/                   # Pytest fixtures
+│─── helpers/                    # Utility methods (waits, logs, etc.)
+│─── api_tests/                  # API testing if required
+│─── drivers/                    # WebDriver executables
+│─── docker/                     # Docker setup
+│─── utilities/                  # Other utilities
+│─── README.md
+│─── run.bat                     # Script to run tests
+│─── report.html
+│─── testfiledemo

@@ -29,6 +29,7 @@ class Test_Buy_Subscription:
 		self.buySub_obj.click_buy_subscription()
 		self.buySub_obj.select_one_year_plan()
 		self.buySub_obj.click_buy_button()
+		self.buySub_obj.close_tooltip_popup()
 		self.buySub_obj.click_pay_now_button()
 		self.logger.info("************ Confirmed one year plan to buy *************")
 		self.buySub_obj.get_grand_total_text()

@@ -13,7 +13,7 @@ if "%1"=="" (
     pytest -s -v .\test_cases\ --alluredir=%WORKSPACE%\allure-results
 ) else (
     echo Running specified test: %1
-    pytest -s -v .\test_cases\%1 --alluredir=%WORKSPACE%\allure-results
+    pytest -s -v %1 --alluredir=%WORKSPACE%\allure-results
 )
 
 :: Generate Allure report and clean old ones

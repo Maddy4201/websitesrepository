@@ -4,6 +4,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC, wait
 
 from base_pages.account_login import Login
+from utilities.read_properties import Read_Config_Data
 
 
 class Add_New_Product(Login):
@@ -17,19 +18,30 @@ class Add_New_Product(Login):
 	discount_type_select_id = "discountType"
 	discount_field_id = "discount"
 	inventory_field_id = "stock_count"
-	category_field_xpath = "select2-category-container"
+	category_field_id = "select2-category-container"
 	category_results_dropdown_xpath = "//ul[@id='select2-category-results']//li"  #This is the list
 	create_category_button_xpath = "//a[normalize-space()='Create Category']"
 	category_name_id = "categoryName"
 	save_category_button_name = "btnSaveCategory"
 	description_field_id = "description"
 	publish_product_button_id = "saveProduct2"
+	ignore_product_tooltip_xpath = "//button[@class='driver-popover-close-btn']"
+
 
 	def __int__(self, driver):
 		super().__init__(driver)
 
 	def click_store_option(self):
 		self.wait.until(EC.visibility_of_element_located((By.XPATH, self.store_option_xpath))).click()
+
+	def ingore_tooltip(self):
+		try:
+			tool_tip = self.driver.find_element(By.XPATH, self.ignore_product_tooltip_xpath)
+			if tool_tip.is_displayed():
+				tool_tip.click()
+				self.wait_for_loader_to_disappear()
+		except:
+			print("Tooltip not present or already handled")
 
 	def click_product_service_option(self):
 		self.wait.until(EC.visibility_of_element_located((By.XPATH, self.product_services_option_xpath))).click()
@@ -79,7 +91,24 @@ class Add_New_Product(Login):
 		self.wait.until(EC.visibility_of_element_located((By.ID, self.inventory_field_id))).send_keys("10")
 
 	def click_category_field(self):
-		self.wait.until(EC.visibility_of_element_located((By.XPATH, self.category_field_xpath))).click()
+		cat_field = self.wait.until(EC.visibility_of_element_located((By.ID, self.category_field_id)))
+		cat_field.click()
+		li_elements = self.driver.find_elements(By.TAG_NAME, "li")
+		cat_text = Read_Config_Data.get_product_category()
+		if li_elements:
+			found = False
+			for li in li_elements:
+				actual_text = li.text.strip()
+				if actual_text == cat_text:
+					li.click()
+					found = True
+					break
+			if not found:
+				print("Category not found in list. Adding new.")
+				self.add_new_category(cat_text)
+		else:
+			print("Step ELSE")
+			self.add_new_category(cat_text)
 
 	def select_from_existing_category(self):
 		categories = self.driver.find_elements(By.XPATH,self.category_results_dropdown_xpath)

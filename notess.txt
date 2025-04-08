@@ -1,0 +1,21 @@
+Open VS Code.
+Use the terminal and move to your project folder:
+- cd C:\Users\Madhur\PycharmProjects\websitesproject
+
+2️⃣ Activate Your Virtual Environment
+Since you created a virtual environment (venv_vscode), activate it:
+- .\venv_vscode\Scripts\Activate.ps1
+
+If activation fails, check if PowerShell execution is restricted by running:
+- Set-ExecutionPolicy Unrestricted -Scope Process
+
+Then try activating the virtual environment again.
+
+3️⃣ Install Dependencies (Only If Needed)
+If you haven't installed all required packages or need to reinstall them, run
+pip install -r requirements.txt
+
+If you don’t have a requirements.txt, create one by running:
+pip freeze > requirements.txt
+
+4️⃣ Run Your PyTest Tests

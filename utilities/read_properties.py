@@ -32,4 +32,19 @@ class Read_Config_Data:
 	def get_selected_city():
 		return config.get('city_data', 'selected_city')
 
+	@staticmethod
+	def get_product_name():
+		return config.get('product_data', 'product_name')
+
+	@staticmethod
+	def get_product_price():
+		return config.get('product_data', 'product_price')
+
+	@staticmethod
+	def get_discount_amount():
+		return config.get('product_data', 'discount_amount')
+
+	@staticmethod
+	def get_product_category():
+		return config.get('product_data', 'product_category')
 

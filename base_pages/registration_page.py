@@ -12,15 +12,16 @@ class Register_An_Account(Login):
 	phone_no_field_id = "phone"
 	password_field_id = "password"
 	sign_up_button_id = "register"
+	otp_field_xpath = "//div[@class='passcode-wrapper']"
 
 
-	def __int__(self, driver):
+	def __init__(self, driver):
 		super().__init__(driver)
 
 	def click_sign_up_button(self):
 		self.driver.find_element(By.XPATH, self.signup_button_xpath).click()
 
-	def switch_to_current_window(self):
+	def switch_to_first_signup_window(self):
 		main_window = self.driver.current_window_handle
 		time.sleep(2)
 		for handle in self.driver.window_handles:
@@ -28,18 +29,25 @@ class Register_An_Account(Login):
 				self.driver.switch_to.window(handle)
 				break
 
-	def enter_full_name(self):
-		self.driver.find_element(By.ID, self.name_field_id).send_keys("Test")
+	def enter_full_name(self, full_name):
+		self.driver.find_element(By.ID, self.name_field_id).send_keys(full_name)
 
-	def enter_email_address(self):
-		self.driver.find_element(By.ID, self.email_field_id).send_keys("Test123@ymail.com")
+	def enter_email_address(self, email_address):
+		self.driver.find_element(By.ID, self.email_field_id).send_keys(email_address)
 
-	def enter_phone_no(self):
-		self.driver.find_element(By.ID, self.phone_no_field_id).send_keys("9876123450")
+	def enter_phone_no(self, phone_no):
+		self.driver.find_element(By.ID, self.phone_no_field_id).send_keys(phone_no)
 
-	def enter_new_password(self):
-		self.driver.find_element(By.ID, self.password_field_id).send_keys("Abcd@1234")
+	def enter_new_password(self, password):
+		self.driver.find_element(By.ID, self.password_field_id).send_keys(password)
 
 	def confirm_sign_up_button(self):
 		self.driver.find_element(By.ID, self.sign_up_button_id)
+
+	def switch_to_otp_window(self):
+		signup_window = self.driver.current_window_handle
+		for otp_handle in self.driver.window_handles:
+			if otp_handle != signup_window
+
+		otp_inputs = self.driver.find_element(By.XPATH, self.otp_field_xpath)
 

@@ -11,6 +11,26 @@ class Read_Config_Data:
 		return home_url
 
 	@staticmethod
+	def full_user_name():
+		full_name = config.get('registration_data', 'full_name')
+		return full_name
+
+	@staticmethod
+	def user_emai_id():
+		new_user_email = config.get('registration_data', 'email_address')
+		return new_user_email
+
+	@staticmethod
+	def user_phone_no():
+		new_phone_no = config.get('registration_data', 'phone_no')
+		return new_phone_no
+
+	@staticmethod
+	def user_password():
+		new_password = config.get('registration_data', 'new_password')
+		return new_password
+
+	@staticmethod
 	def get_url ():
 		url = config.get('config_data', 'website_url')
 		return url
@@ -53,4 +73,6 @@ class Read_Config_Data:
 	@staticmethod
 	def get_product_category():
 		return config.get('product_data', 'product_category')
+
+
 

@@ -4,6 +4,12 @@ config = configparser.RawConfigParser()
 config.read(".\\configurations\\config.ini")
 
 class Read_Config_Data:
+
+	@staticmethod
+	def get_home_page_url():
+		home_url = config.get('registration_data', 'home_page_url')
+		return home_url
+
 	@staticmethod
 	def get_url ():
 		url = config.get('config_data', 'website_url')

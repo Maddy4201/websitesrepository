@@ -28,7 +28,7 @@ class Add_New_Product(Login):
 	ignore_product_tooltip_xpath = "//button[@class='driver-popover-close-btn']"
 
 
-	def __int__(self, driver):
+	def __init__(self, driver):
 		super().__init__(driver)
 
 	def click_store_option(self):
@@ -107,7 +107,7 @@ class Add_New_Product(Login):
 				print("Category not found in list. Adding new.")
 				self.add_new_category(cat_text)
 		else:
-			print("Step ELSE")
+			print("Step ELSE is being execute whihc adds new category")
 			self.add_new_category(cat_text)
 
 	def select_from_existing_category(self):

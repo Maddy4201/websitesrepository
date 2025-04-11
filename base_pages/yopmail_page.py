@@ -21,7 +21,6 @@ class Yop_Mail_Page:
 		self.driver.find_element(By.XPATH, "//i[@class='material-icons-outlined f36']").click()
 		email_header = self.driver.find_element(By.XPATH, "//div[@class='bname']")
 		print(email_header.text)
-		# the_iframe = driver.find_element(By.XPATH, "//iframe[@id='ifinbox']")
 		self.driver.switch_to.frame("ifinbox")
 		email_list = self.driver.find_elements(By.CLASS_NAME, "m")
 		if email_list:
@@ -32,8 +31,7 @@ class Yop_Mail_Page:
 
 		email_body = self.driver.find_element(By.XPATH, "//main[@class='yscrollbar']").text
 		# Print the whole content (optional)
-		print("Full email text:\n", email_body)
-
+		# print("Full email text:\n", email_body)
 		otp_match = re.search(r"\b\d{4}\b", email_body)
 		return otp_match.group() if otp_match else None
 		# if otp_match:
@@ -41,7 +39,6 @@ class Yop_Mail_Page:
 		# 	print("OTP Found: ", otp)
 		# else:
 		# 	print("OTP not found")
-
 
 		time.sleep(5)
 

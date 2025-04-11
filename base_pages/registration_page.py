@@ -1,8 +1,11 @@
 import time
 
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 from base_pages.account_login import Login
+from base_pages.base_page import BasePage
 
 
 class Register_An_Account(Login):
@@ -12,8 +15,6 @@ class Register_An_Account(Login):
 	phone_no_field_id = "phone"
 	password_field_id = "password"
 	sign_up_button_id = "register"
-	otp_field_xpath = "//div[@class='passcode-wrapper']"
-
 
 	def __init__(self, driver):
 		super().__init__(driver)
@@ -42,12 +43,7 @@ class Register_An_Account(Login):
 		self.driver.find_element(By.ID, self.password_field_id).send_keys(password)
 
 	def confirm_sign_up_button(self):
-		self.driver.find_element(By.ID, self.sign_up_button_id)
+		self.driver.find_element(By.ID, self.sign_up_button_id).click()
+		self.wait_for_loader_to_disappear()
 
-	def switch_to_otp_window(self):
-		signup_window = self.driver.current_window_handle
-		for otp_handle in self.driver.window_handles:
-			if otp_handle != signup_window
-
-		otp_inputs = self.driver.find_element(By.XPATH, self.otp_field_xpath)
 

@@ -24,5 +24,7 @@ class Test_Registration:
 		self.reg_obj.enter_phone_no(self.phone_no)
 		self.reg_obj.enter_new_password(self.new_password)
 		self.reg_obj.confirm_sign_up_button()
+		self.reg_obj.enter_otp("1234")
+
 		time.sleep(5)
 

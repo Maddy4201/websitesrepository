@@ -30,6 +30,33 @@ class Read_Config_Data:
 		new_password = config.get('registration_data', 'new_password')
 		return new_password
 
+	# Last registration page details below
+	@staticmethod
+	def new_website_title():
+		website_title = config.get('registration_data', 'new_website_title')
+		return website_title
+
+	@staticmethod
+	def get_country_code():
+		country_code = config.get('registration_data', 'country_code')
+		return country_code
+
+	@staticmethod
+	def get_city_initials():
+		city_int = config.get('registration_data', 'city_initials')
+		return city_int
+
+	@staticmethod
+	def get_city_name():
+		city_name = config.get('registration_data', 'city_name')
+		return city_name
+
+	@staticmethod
+	def get_post_code():
+		post_code = config.get('registration_data', 'post_code')
+		return post_code
+
+	# Login page below
 	@staticmethod
 	def get_url ():
 		url = config.get('config_data', 'website_url')
@@ -50,6 +77,7 @@ class Read_Config_Data:
 		invalid_username = config.get('config_data', 'invalid_username')
 		return invalid_username
 
+	# Cnage city
 	@staticmethod
 	def get_city_input():
 		return config.get('city_data', 'city_input')  # Fetch city input for search
@@ -58,6 +86,7 @@ class Read_Config_Data:
 	def get_selected_city():
 		return config.get('city_data', 'selected_city')
 
+	# Produt details
 	@staticmethod
 	def get_product_name():
 		return config.get('product_data', 'product_name')

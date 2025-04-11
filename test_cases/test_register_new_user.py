@@ -59,7 +59,6 @@ class Test_Registration:
 		self.last_page.select_the_city(self.city_initials, self.city_name)
 		self.last_page.enter_postal_address()
 		self.last_page.enter_postal_code(self.postal_code)
-
-
+		self.last_page.click_create_website_button()
 		time.sleep(5)
 

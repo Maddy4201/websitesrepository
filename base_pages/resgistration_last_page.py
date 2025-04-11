@@ -8,7 +8,7 @@ class Enter_Website_Details(Login):
 
 	website_title_name = "business_name"
 	business_category_select_id = "category"
-	select_city_field_xpath = "//span[@id='select2-city-container']"
+	select_city_field_xpath = "//span[@title='Select City']"
 	enter_city_field_xpath = "//input[@class='select2-search__field']"
 	cities_list_xpath = "//ul[@role='tree']//li"
 	postal_address_field_xpath = "//textarea[@id='address_1']"
@@ -27,7 +27,7 @@ class Enter_Website_Details(Login):
 	def select_website_category(self):
 		self.wait_for_loader_to_disappear()
 		busi_cat_dropdwn = Select(self.driver.find_element(By.ID, self.business_category_select_id))
-		busi_cat_dropdwn.select_by_visible_text("ART")
+		busi_cat_dropdwn.select_by_value("ART")
 
 	def select_the_city(self, city_initial, city_name):
 		self.driver.find_element(By.XPATH, self.select_city_field_xpath).click()

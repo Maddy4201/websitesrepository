@@ -17,6 +17,7 @@ class Register_An_Account(Login):
 	country_code_field_xpath = "//span[@id='select2-phonecode-container']"
 	country_list_box_xpath = "//ul[@class='select2-results__options']//li"
 
+
 	def __init__(self, driver):
 		super().__init__(driver)
 

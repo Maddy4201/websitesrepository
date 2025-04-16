@@ -15,6 +15,7 @@ class Enter_Website_Details(Login):
 	postal_code_field_xpath = "//input[@id='pincode']"
 	show_address_checkbox_xpath = "//input[@name='show_address']"
 	create_website_button_xpath = "//button[@type='submit']"
+	congratulations_msg_xpath = "//h3[normalize-space()='Congratulations!']"
 
 	def __init__(self, driver):
 		super().__init__(driver)
@@ -55,6 +56,13 @@ class Enter_Website_Details(Login):
 
 	def click_create_website_button(self):
 		self.driver.find_element(By.XPATH, self.create_website_button_xpath).click()
+
+	def validate_website_creation_message(self):
+		congo_msg = self.driver.find_element(By.XPATH, self.congratulations_msg_xpath)
+		if congo_msg.is_displayed:
+			print("New User Account has been created")
+		else:
+			print("Account was not created yet..")
 
 
 

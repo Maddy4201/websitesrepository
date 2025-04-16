@@ -2,6 +2,7 @@ import re
 import time
 from selenium.webdriver.common.by import By
 from utilities.read_properties import Read_Config_Data
+import random
 
 
 class Yop_Mail_Page:
@@ -11,13 +12,21 @@ class Yop_Mail_Page:
 	entered_mail_header_xpath = "//div[@class='bname']"
 	iframe_xpath = "//iframe[@id='ifinbox']"
 
+
 	def __init__(self, driver):
 		self.driver = driver
 
+	def get_email_from_file(self):
+		with open("test_data/generated_email.txt", "r") as file:
+			emails = file.readlines()
+		# Get the last email used during registration
+		return emails[-1].strip() if emails else None
+
 	def get_otp_from_yopmail(self):
-		otp_email = Read_Config_Data.user_emai_id()
+		# otp_email = Read_Config_Data.user_emai_id()
 		self.driver.get("https://yopmail.com/en")
-		self.driver.find_element(By.XPATH, "//input[@class='ycptinput']").send_keys(otp_email)
+		email = self.get_email_from_file()
+		self.driver.find_element(By.XPATH, "//input[@class='ycptinput']").send_keys(email)
 		self.driver.find_element(By.XPATH, "//i[@class='material-icons-outlined f36']").click()
 		email_header = self.driver.find_element(By.XPATH, "//div[@class='bname']")
 		print(email_header.text)

@@ -1,3 +1,5 @@
+import time
+
 import pytest
 from selenium import webdriver
 from base_pages.account_login import Login
@@ -27,6 +29,7 @@ class Test_Buy_Subscription:
 		self.buySub_obj.click_subscription_button()
 		self.buySub_obj.select_yearly_plan()
 		self.buySub_obj.click_buy_subscription()
+		time.sleep(2)
 		self.buySub_obj.select_one_year_plan()
 		self.buySub_obj.click_buy_button()
 		self.buySub_obj.close_tooltip_popup()

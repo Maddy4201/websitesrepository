@@ -13,7 +13,7 @@ class Purchase_Subscription(Login):
 	buy_subscription_button_xpath = "//span[normalize-space()='Buy Subscription']"
 	yearly_plan_xpath = "//span[@class='pp-plan yearly active']"
 	buy_subscription_second_button_xpath = "//a[@id='openPopup']"
-	one_year_plan_xpath = "//div[@id='currentPlanDuration']"
+	one_year_plan_xpath = "//div[@class='radio-circle']"
 	buy_button_xpath = "//button[@class='upgrade-btn']"
 	pay_now_button_id = "show-payment-pop-up"
 	grand_total_price_id = "formatted-grand-total"
@@ -32,8 +32,10 @@ class Purchase_Subscription(Login):
 	def click_buy_subscription(self):
 		self.wait.until(EC.visibility_of_element_located((By.XPATH, self.buy_subscription_second_button_xpath))).click()
 		self.wait_for_loader_to_disappear()
+
 	def select_one_year_plan(self):
-		self.wait.until(EC.visibility_of_element_located((By.XPATH, self.one_year_plan_xpath))).click()
+		plan_select= self.driver.find_elements(By.XPATH, self.one_year_plan_xpath)
+		plan_select[0].click()
 
 	def click_buy_button(self):
 		self.wait.until(EC.visibility_of_element_located((By.XPATH, self.buy_button_xpath))).click()

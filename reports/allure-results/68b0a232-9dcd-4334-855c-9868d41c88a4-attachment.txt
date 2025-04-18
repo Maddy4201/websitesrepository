@@ -1,6 +1,0 @@
-Loader disappeared, proceeding...
-No Tooltip pop-up, moving on
-Pop-up not found, proceeding normally.
-No Tooltip pop-up, moving on
-Loader disappeared, proceeding...
-Update Verified

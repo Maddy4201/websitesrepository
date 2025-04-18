@@ -11,11 +11,11 @@ from utilities.read_properties import Read_Config_Data
 
 class Test_Registration:
 	home_page_url = Read_Config_Data.get_home_page_url()
-	# full_name = Read_Config_Data.full_user_name()
-	# email_address = Read_Config_Data.user_emai_id()
-	# phone_no = Read_Config_Data.user_phone_no()
+	full_name = Read_Config_Data.full_user_name()
+	email_address = Read_Config_Data.user_emai_id()
+	phone_no = Read_Config_Data.user_phone_no()
 	new_password = Read_Config_Data.user_password()
-	# website_title = Read_Config_Data.new_website_title()
+	website_title = Read_Config_Data.new_website_title()
 	country_code = Read_Config_Data.get_country_code()
 	city_initials = Read_Config_Data.get_city_initials()
 	city_name = Read_Config_Data.get_city_name()
@@ -24,10 +24,10 @@ class Test_Registration:
 	# 🔥 Dynamic Data
 	first_name = data_generator.get_random_first_name()
 	last_name = data_generator.get_random_last_name()
-	full_name = f"{first_name} {last_name}"
+	reg_full_name = f"{first_name} {last_name}"
 	email = data_generator.generate_email(first_name)
-	phone_no = data_generator.generate_phone_number()
-	website_title = data_generator.get_random_website_name()
+	reg_phone_no = data_generator.generate_phone_number()
+	reg_website_title = data_generator.get_random_website_name()
 
 	def test_registration(self, setup):
 		self.driver = setup
@@ -37,10 +37,10 @@ class Test_Registration:
 		self.reg_obj = Register_An_Account(self.driver)
 		self.reg_obj.click_sign_up_button()
 		self.reg_obj.switch_to_first_signup_window()
-		self.reg_obj.enter_full_name(self.full_name)
+		self.reg_obj.enter_full_name(self.reg_full_name)
 		self.reg_obj.enter_email_address(self.email)
 		self.reg_obj.select_country_code(self.country_code)
-		self.reg_obj.enter_phone_no(self.phone_no)
+		self.reg_obj.enter_phone_no(self.reg_phone_no)
 		self.reg_obj.enter_new_password(self.new_password)
 		self.reg_obj.confirm_sign_up_button()
 
@@ -66,7 +66,7 @@ class Test_Registration:
 		# self.otp_page.click_verify_button()
 
 		self.last_page = Enter_Website_Details(self.driver)
-		self.last_page.enter_website_title(self.website_title)
+		self.last_page.enter_website_title(self.reg_website_title)
 		self.last_page.select_website_category()
 		self.last_page.select_the_city(self.city_initials, self.city_name)
 		self.last_page.enter_postal_address()

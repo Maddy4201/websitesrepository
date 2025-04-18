@@ -1,3 +1,0 @@
-[32mINFO    [0m root:test_changeBusiness_city.py:21 ************ Running Test no. 02 *************
-[32mINFO    [0m root:test_changeBusiness_city.py:29 ************ Logged in successfully to change business location *************
-[32mINFO    [0m root:test_changeBusiness_city.py:36 ************ Change Business Location Successfully *************

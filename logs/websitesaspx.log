@@ -1,0 +1,64 @@
+2025-04-17 17:47:43 - WARNING - The chromedriver version (134.0.6998.35) detected in PATH at C:\Users\Madhur\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (135.0.7049.95); currently, chromedriver 135.0.7049.95 is recommended for chrome 135.*, so it is advised to delete the driver in PATH and retry
+2025-04-17 17:47:45 - INFO - ************Running Test no. 01*************
+2025-04-17 17:47:45 - INFO - **************Opened the browser****************
+2025-04-17 17:48:02 - INFO - **************Logged into the account****************
+2025-04-17 17:48:02 - INFO - **********Login in test closed*********
+2025-04-17 17:48:05 - WARNING - The chromedriver version (134.0.6998.35) detected in PATH at C:\Users\Madhur\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (135.0.7049.95); currently, chromedriver 135.0.7049.95 is recommended for chrome 135.*, so it is advised to delete the driver in PATH and retry
+2025-04-17 17:48:06 - INFO - **********Launched browser for 2nd test case*********
+2025-04-17 17:48:13 - INFO - **********Logged in*********
+2025-04-17 17:48:13 - INFO - **********Error message validated *********
+2025-04-18 12:03:01 - WARNING - The chromedriver version (134.0.6998.35) detected in PATH at C:\Users\Madhur\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (135.0.7049.95); currently, chromedriver 135.0.7049.95 is recommended for chrome 135.*, so it is advised to delete the driver in PATH and retry
+2025-04-18 12:03:03 - INFO - ************Running Test no. 01*************
+2025-04-18 12:03:03 - INFO - **************Opened the browser****************
+2025-04-18 12:03:11 - INFO - **************Logged into the account****************
+2025-04-18 12:03:12 - INFO - **********Login in test closed*********
+2025-04-18 12:03:14 - WARNING - The chromedriver version (134.0.6998.35) detected in PATH at C:\Users\Madhur\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (135.0.7049.95); currently, chromedriver 135.0.7049.95 is recommended for chrome 135.*, so it is advised to delete the driver in PATH and retry
+2025-04-18 12:03:16 - INFO - **********Launched browser for 2nd test case*********
+2025-04-18 12:03:24 - INFO - **********Logged in*********
+2025-04-18 12:03:24 - INFO - **********Error message validated *********
+2025-04-18 12:04:28 - WARNING - The chromedriver version (134.0.6998.35) detected in PATH at C:\Users\Madhur\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (135.0.7049.95); currently, chromedriver 135.0.7049.95 is recommended for chrome 135.*, so it is advised to delete the driver in PATH and retry
+2025-04-18 12:04:29 - INFO - ************Running Test no. 01*************
+2025-04-18 12:04:29 - INFO - **************Opened the browser****************
+2025-04-18 12:04:37 - INFO - **************Logged into the account****************
+2025-04-18 12:04:38 - INFO - **********Login in test closed*********
+2025-04-18 12:04:40 - WARNING - The chromedriver version (134.0.6998.35) detected in PATH at C:\Users\Madhur\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (135.0.7049.95); currently, chromedriver 135.0.7049.95 is recommended for chrome 135.*, so it is advised to delete the driver in PATH and retry
+2025-04-18 12:04:42 - INFO - **********Launched browser for 2nd test case*********
+2025-04-18 12:04:51 - INFO - **********Logged in*********
+2025-04-18 12:04:51 - INFO - **********Error message validated *********
+2025-04-18 12:07:19 - WARNING - The chromedriver version (134.0.6998.35) detected in PATH at C:\Users\Madhur\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (135.0.7049.95); currently, chromedriver 135.0.7049.95 is recommended for chrome 135.*, so it is advised to delete the driver in PATH and retry
+2025-04-18 12:07:20 - INFO - ************Running Test no. 01*************
+2025-04-18 12:07:20 - INFO - **************Opened the browser****************
+2025-04-18 12:07:29 - INFO - **************Logged into the account****************
+2025-04-18 12:07:30 - INFO - **********Login in test closed*********
+2025-04-18 12:07:32 - WARNING - The chromedriver version (134.0.6998.35) detected in PATH at C:\Users\Madhur\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (135.0.7049.95); currently, chromedriver 135.0.7049.95 is recommended for chrome 135.*, so it is advised to delete the driver in PATH and retry
+2025-04-18 12:07:33 - INFO - **********Launched browser for 2nd test case*********
+2025-04-18 12:07:40 - INFO - **********Logged in*********
+2025-04-18 12:07:40 - INFO - **********Error message validated *********
+2025-04-18 12:10:42 - WARNING - The chromedriver version (134.0.6998.35) detected in PATH at C:\Users\Madhur\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (135.0.7049.95); currently, chromedriver 135.0.7049.95 is recommended for chrome 135.*, so it is advised to delete the driver in PATH and retry
+2025-04-18 12:10:43 - INFO - ************Running Test no. 01*************
+2025-04-18 12:10:43 - INFO - **************Opened the browser****************
+2025-04-18 12:10:52 - INFO - **************Logged into the account****************
+2025-04-18 12:10:52 - INFO - **********Login in test closed*********
+2025-04-18 12:10:55 - WARNING - The chromedriver version (134.0.6998.35) detected in PATH at C:\Users\Madhur\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (135.0.7049.95); currently, chromedriver 135.0.7049.95 is recommended for chrome 135.*, so it is advised to delete the driver in PATH and retry
+2025-04-18 12:10:56 - INFO - **********Launched browser for 2nd test case*********
+2025-04-18 12:11:02 - INFO - **********Logged in*********
+2025-04-18 12:11:02 - INFO - **********Error message validated *********
+2025-04-18 12:12:32 - WARNING - The chromedriver version (134.0.6998.35) detected in PATH at C:\Users\Madhur\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (135.0.7049.95); currently, chromedriver 135.0.7049.95 is recommended for chrome 135.*, so it is advised to delete the driver in PATH and retry
+2025-04-18 12:12:33 - INFO - ************Running Test no. 01*************
+2025-04-18 12:12:33 - INFO - **************Opened the browser****************
+2025-04-18 12:12:44 - INFO - **************Logged into the account****************
+2025-04-18 12:12:44 - INFO - **********Login in test closed*********
+2025-04-18 12:12:46 - WARNING - The chromedriver version (134.0.6998.35) detected in PATH at C:\Users\Madhur\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (135.0.7049.95); currently, chromedriver 135.0.7049.95 is recommended for chrome 135.*, so it is advised to delete the driver in PATH and retry
+2025-04-18 12:12:48 - INFO - **********Launched browser for 2nd test case*********
+2025-04-18 12:12:54 - INFO - **********Logged in*********
+2025-04-18 12:12:54 - INFO - **********Error message validated *********
+2025-04-18 12:14:59 - WARNING - The chromedriver version (134.0.6998.35) detected in PATH at C:\Users\Madhur\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (135.0.7049.95); currently, chromedriver 135.0.7049.95 is recommended for chrome 135.*, so it is advised to delete the driver in PATH and retry
+2025-04-18 12:15:00 - INFO - ************ Running Test no. 02 *************
+2025-04-18 12:15:08 - INFO - ************ Logged in successfully to change business location *************
+2025-04-18 12:15:18 - INFO - ************ Change Business Location Successfully *************
+2025-04-18 13:23:07 - WARNING - The chromedriver version (134.0.6998.35) detected in PATH at C:\Users\Madhur\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (135.0.7049.95); currently, chromedriver 135.0.7049.95 is recommended for chrome 135.*, so it is advised to delete the driver in PATH and retry
+2025-04-18 13:23:13 - WARNING - The chromedriver version (134.0.6998.35) detected in PATH at C:\Users\Madhur\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (135.0.7049.95); currently, chromedriver 135.0.7049.95 is recommended for chrome 135.*, so it is advised to delete the driver in PATH and retry
+2025-04-18 13:29:50 - WARNING - The chromedriver version (134.0.6998.35) detected in PATH at C:\Users\Madhur\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (135.0.7049.95); currently, chromedriver 135.0.7049.95 is recommended for chrome 135.*, so it is advised to delete the driver in PATH and retry
+2025-04-18 13:30:00 - INFO - ********* Logged in for adding an update ***********
+2025-04-18 13:30:04 - INFO - ********* Added and saved an Update ***********
+2025-04-18 13:30:07 - WARNING - The chromedriver version (134.0.6998.35) detected in PATH at C:\Users\Madhur\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (135.0.7049.95); currently, chromedriver 135.0.7049.95 is recommended for chrome 135.*, so it is advised to delete the driver in PATH and retry

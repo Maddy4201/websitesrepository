@@ -60,6 +60,3 @@ class Purchase_Subscription(Login):
 		print(priceText.text)
 
 
-
-
-

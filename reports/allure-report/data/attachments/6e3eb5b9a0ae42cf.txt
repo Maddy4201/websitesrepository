@@ -1,2 +1,0 @@
-[32mINFO    [0m root:test_add_product.py:23 ************ Logged in to add a product ************
-[32mINFO    [0m root:test_add_product.py:36 ************ Filling in the product details ************

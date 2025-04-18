@@ -77,7 +77,7 @@ class Read_Config_Data:
 		invalid_username = config.get('config_data', 'invalid_username')
 		return invalid_username
 
-	# Cnage city
+	# Change city
 	@staticmethod
 	def get_city_input():
 		return config.get('city_data', 'city_input')  # Fetch city input for search
